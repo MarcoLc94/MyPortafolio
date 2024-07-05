@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+/* styles.css */
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap");
 * {
   margin: 0;
   font-family: "Poppins", "sans-serif";
@@ -8,14 +10,10 @@
 }
 
 body {
-  background: linear-gradient(
-    360deg,
-    rgb(0, 0, 0) 20%,
-    rgb(0, 59, 0),
-    rgb(0, 144, 146),
-    rgb(171, 255, 255)
-  );
+  background: linear-gradient(135deg, #1e90ff, #00f0b8);
   color: #ededed;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -23,39 +21,75 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10%;
-  background: transparent;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  align-items: center;
+  z-index: 900; /* Asegúrate de que esté arriba del contenido */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.3px);
-  -webkit-backdrop-filter: blur(3.3px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.3px);
+  backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(3.3px);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Estilos para el logo */
 .logo {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-weight: 800;
   font-size: 26px;
   color: #ededed;
   text-decoration: none;
-  font-weight: 800;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-icon {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ededed;
+  z-index: 1001; /* Asegúrate de que esté encima del navbar */
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ededed;
+  z-index: 1001; /* Asegúrate de que esté encima del navbar */
+}
+
+/* Estilos para el menú de navegación */
+.navbar {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.97);
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Asegúrate de que esté debajo del header */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Aumenta la duración de la transición */
+  transform: translateX(-100%);
+  opacity: 0; /* Oculta el menú inicialmente */
+}
+
+.navbar.show {
+  transform: translateX(0);
+  opacity: 0.9; /* Muestra el menú cuando se agrega la clase */
 }
 
 .navbar a {
-  font-size: 18px;
   color: #ededed;
   text-decoration: none;
+  font-size: 24px;
   font-weight: 500;
-  margin-left: 35px;
+  margin: 10px 0;
 }
 
 .navbar a:hover,
@@ -64,14 +98,26 @@ body {
   font-weight: 800;
 }
 
+/* Estilos para el botón de menú en dispositivos móviles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .close-icon {
+    display: block;
+  }
+}
+
 .home {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   padding: 0 10%;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(0, 0, 0, 0.4);
+  padding-bottom: 15vh;
 }
 
 .home-content {
@@ -87,7 +133,17 @@ body {
 
 .home-content h3 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+.home-content h3 span {
+  display: inline-flex;
+  align-items: baseline;
+  margin-left: 1vw;
+}
+
+.home-content .typing-animation {
   color: #00f0b8;
 }
 
@@ -97,10 +153,11 @@ body {
 }
 
 .home-content .btn-box {
-  width: 345px;
+  margin-top: 5vh;
+  width: 80vw;
   height: 50px;
   display: flex;
-  justify-content: space-between;
+  gap: 4vw;
 }
 
 .btn-box a {
@@ -112,12 +169,13 @@ body {
   border: 2px solid #00f0b8;
   border-radius: 8px;
   font-size: 19px;
-  color: #081b29;
+  color: black;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
   justify-content: center;
   align-items: center;
+  justify-items: center;
   z-index: 1;
   overflow: hidden;
   transition: 0.9s;
@@ -156,15 +214,7 @@ body {
   width: 100%;
 }
 
-.home-sci {
-  position: absolute;
-  bottom: 40px;
-  width: 170px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.home-sci a {
+.footer a {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -172,32 +222,240 @@ body {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #00f0b8;
+  border: 2px solid #004386;
   border-radius: 50%;
   font-size: 20px;
-  color: #00f0b8;
+  color: #004386;
   text-decoration: none;
   z-index: 1;
   overflow: hidden;
 }
 
-.home-sci a::before {
+.footer a::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0%;
   height: 100%;
-  background: #00f0b8;
+  background: #004386;
   z-index: -1;
   transition: 0.8s;
 }
 
-.home-sci a:hover::before {
+.footer a:hover::before {
   width: 100%;
 }
 
-.home-sci a:hover {
-  color: #081b29;
+.footer a:hover {
+  color: #ededed;
   transition: 0.09s;
+}
+
+.items-a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  height: 100vh;
+}
+
+.items-a a {
+  font-size: 40px;
+  margin: 4vh;
+}
+
+.info-main {
+  background-color: #ededed;
+  color: #004386;
+  border: 50px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-main p {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.info-main .container-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info-main img {
+  width: 80vw;
+  border-radius: 10px 10px 10px 10px;
+  margin: 40px 40px 5px;
+}
+
+.techCards {
+  background: linear-gradient(135deg, #004386, #000c17);
+  padding: 20px;
+}
+
+.footer {
+  display: flex;
+  gap: 20px;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
+footer {
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+.typing-animation {
+  display: inline-block;
+  font-size: 28px; /* Tamaño de la fuente */
+  font-weight: 900;
+  font-stretch: expanded;
+  color: #ffffff; /* Color del texto */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #00f0b8; /* Línea de cursor */
+  animation: blink-caret 0.75s step-end infinite;
+  line-height: 1.2; /* Alineación vertical del texto */
+}
+/*Estilos de la seccion Tecnologias */
+
+.title2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20%;
+  margin-top: 20%;
+  filter: drop-shadow(0 0 18px cyan);
+}
+
+.techCards {
+  display: flex;
+  flex-direction: column;
+}
+
+.techPhoto {
+  width: 20%;
+  height: 10%;
+}
+
+.card-tech {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.techTitle {
+  color: #ededed;
+  margin: 25px;
+  text-align: center;
+  filter: drop-shadow(0 0 18px cyan);
+}
+
+.info-project {
+  background-color: #ededed;
+  color: #004386;
+  padding: 20px;
+}
+
+.carousel-container {
+  background-color: #ededed;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.carousel {
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  0% {
+    width: 0;
+    content: "Front Developer";
+  }
+  25% {
+    width: 14ch; /* Longitud de "Front Developer" */
+  }
+  30% {
+    width: 0;
+    content: "React.js Developer";
+  }
+  55% {
+    width: 16ch; /* Longitud de "React.js Developer" */
+  }
+  60% {
+    width: 0;
+    content: "Next.js Developer";
+  }
+  85% {
+    width: 18ch; /* Longitud de "Next.js Developer" */
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Parpadeo del cursor */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00f0b8; /* Color del cursor */
+  }
 }

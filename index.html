@@ -1,40 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Marco´s Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <a href="#" class="logo">Marco.</a>
-
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Contact</a>
-        </nav>
+      <a href="#" class="logo">My portfolio</a>
+      <div class="menu-icon" id="menu-icon">
+        <i class="bx bx-menu"></i>
+      </div>
     </header>
+    <nav class="navbar" id="navbar">
+      <div class="close-icon" id="close-icon">
+        <i class="bx bx-x"></i>
+      </div>
+      <div class="items-a">
+        <a href="#" class="active">🏠 Home</a>
+        <a href="#">🧑‍💻 About</a>
+        <a href="#">🛠️ Services</a>
+        <a href="#">🖼️ Portafolio</a>
+        <a href="#">📧 Contact</a>
+      </div>
+    </nav>
     <section class="home">
-        <div class="home-content">
-            <h1>Hi, I'm Marco López</h1>
-            <h3>Full Stack Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolores dolorem suscipit ipsa vel sapiente, aspernatur delectus nostrum ratione eos, corrupti placeat dolorum necessitatibus, facere aliquam recusandae!</p>
-            <div class="btn-box">
-                <a href="#">Hire Me</a>
-                <a href="#">Let's Talk</a>
-            </div>
+      <div class="home-content">
+        <h3>Hi 👋 I'm</h3>
+        <h1>Marco López</h1>
+        <h3>And I'm a <span class="typing-animation"></span></h3>
+        <div class="btn-box">
+          <a id="firstbtn" href="#">Let’s Talk ></a>
+          <a href="#">Hire me ></a>
         </div>
-        <div class="home-sci">
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
-            <a href="#"><i class='bx bxl-github' ></i></a>
-        </div>
+      </div>
     </section>
-</body>
+    <div class="info-main">
+      <p><p>&lt;About me &gt;</p></p>
+     <div class="container-img">
+      <img src="./assets/Imagen de WhatsApp 2024-07-05 a las 13.02.00_57b0ea03.jpg" alt="">
+      <div class="footer">
+        <a href="https://www.facebook.com/ChampMarco" target="_blank">
+          <i class="bx bxl-facebook-circle"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/marcolc94/" target="_blank">
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a href="https://github.com/MarcoLc94" target="_blank">
+          <i class="bx bxl-github"></i>
+        </a>
+      </div>
+     </div>
+      <h1>Hi! I´m Marco López</h1>
+      <h3>
+        I am very passionate about <b>front-end</b> and I have a solid
+        experience in creating engaging web experiences and functional.
+      </h3>
+      <h3>
+        My approach focuses on combining creative design with technical
+        development to offer high quality web solutions and performance.
+      </h3>
+      <h3>
+        I enjoy everything from responsive design to optimizing the user
+        experience. I strive to create websites that are not only visually
+        attractive, but also intuitive and accessible to everyone.
+      </h3>
+      <h3>
+        Explore my portfolio to discover my work and how I can help you achieve
+        your goals online. I hope to collaborate with you soon!
+      </h3>
+    </div>
+
+    <section class="techCards" id="techpath">
+      <h2 class="title2">My technology stacks</h2>
+      <div class="card-tech">
+        <img class="techPhoto" src="./assets/html.png" alt="">
+        <p class="techTitle">HTML 5</p>
+        <p>I use HTML to structure the content of my web pages, ensuring the use of semantic tags for better accessibility and SEO.</p>
+      </div>
+      <div class="card-tech">
+        <p>I apply CSS to style and design my websites, creating attractive and responsive interfaces that adapt to different devices and screen sizes.</p>
+        <img class="techPhoto" src="./assets/css (1).png" alt="">
+        <p class="techTitle">CSS 3</p>
+      </div>
+      <div class="card-tech">
+        <img class="techPhoto" src="./assets/js (1).png" alt="">
+        <p class="techTitle">Javascript ES6</p>
+        <p>I integrate JavaScript to add interactivity and dynamism to my projects, from smooth animations to advanced functionalities like DOM manipulation and API calls.</p>
+      </div>
+      <div class="card-tech">
+        <p>I develop my user interfaces using React, leveraging its modularity and ability to reuse components, allowing me to create scalable and easy-to-maintain applications.</p>
+        <img class="techPhoto" src="./assets/icons8-reaccionar-400.png" alt="">
+        <p class="techTitle">React JS</p>
+      </div>
+      <div class="card-tech">
+        <img class="techPhoto" src="./assets/icons8-mecanografiado-480.png" alt="">
+        <p class="techTitle">Typescript</p>
+        <p>I implement TypeScript in my projects to add a static typing system that helps me detect errors at compile time and improve the quality and robustness of my code.</p>
+      </div>
+      <div class="card-tech">
+        <p>I use Node.js to develop the backend of my web applications, leveraging its ability to handle multiple connections efficiently and build robust and scalable APIs.</p>
+        <img class="techPhoto" src="./assets/programacion.png" alt="">
+        <p class="techTitle">Node JS</p>
+      </div>
+      <div class="card-tech">
+        <img class="techPhoto" src="./assets/postgre.png" alt="">
+        <p class="techTitle">Postgre SQL</p>
+        <p>I use PostgreSQL as my preferred relational database, ensuring data integrity and security while efficiently handling large volumes of information.</p>
+      </div>
+      <div class="card-tech">
+        <p>In certain projects, I opt for MySQL as my relational database management system, relying on its speed and reliability to store and manipulate critical data.</p>
+        <img class="techPhoto" src="./assets/mysql (1).png" alt="">
+        <p class="techTitle">MySQL</p>
+      </div>
+      <div class="card-tech">
+        <img class="techPhoto" src="./assets/social.png" alt="">
+        <p class="techTitle">Git & Github</p>
+        <p>I manage my projects collaboratively using Git and GitHub, allowing me to maintain solid version control, collaborate with other developers, and easily deploy my applications in production.</p>
+      </div>
+      <div class="card-tech">
+        <p>I use Vite.js as a build tool in my projects, leveraging its speed and efficiency to accelerate the development process and enhance the user experience.</p>
+        <img class="techPhoto" src="./assets/Vite.js.png" alt="">
+        <p class="techTitle">Vite + React</p>
+      </div>   
+      <div class="card-tech">
+        <img class="techPhoto" src="./assets/ruby.png" alt="">
+        <p class="techTitle">Ruby</p>
+        <p>With Ruby, I write clean, maintainable code to build scalable applications. Ruby's elegant syntax and dynamic nature allow for quick development of high-quality software solutions.</p>
+      </div>
+      <div class="card-tech">
+        <p>Is a powerful web application framework that enables me to develop robust and efficient web applications. Its convention-over-configuration approach and built-in tools streamline the development process, allowing for rapid and effective project delivery.</p>
+        <img class="techPhoto" src="./assets/PikPng.com_kali-linux-png_4476025.png" alt="">
+        <p class="techTitle">Ruby On Rails</p>
+      </div>      
+    </section>
+
+    <div class="info-project">
+     <h1>My Projects</h1>
+     <h3>&lt;Review my work now overhere&gt;</h3>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-slide">
+          <a href="https://github.com/MarcoLc94/ToDo-List-ReactVite">
+              <img src="./assets/ToDoList React.jpg" alt="Project 4">
+              <h3>June 2023 React ToDo - React.js</h3>
+          </a>
+      </div>
+          <div class="carousel-slide">
+              <a href="https://github.com/MarcoLc94/ToDoList-Javascript">
+                  <img src="./assets/todojs.jpg" alt="Project 3">
+                  <h3>March 2023 ToDo Js - Javascript</h3>
+              </a>
+          </div>
+          <div class="carousel-slide">
+              <a href="https://github.com/MarcoLc94/Expenses-JS">
+                  <img src="./assets/expenses js.jpg" alt="Project 2">
+                  <h3>January 2023 Expenses App - JavaScript</h3>
+              </a>
+          </div>
+          <div class="carousel-slide">
+              <a href="https://github.com/MarcoLc94/Expensable-App-JS">
+                  <img src="./assets/expensable.jpg" alt="Project 3">
+                  <h3>February 2023 Expenses 2.0 - Javascript</h3>
+              </a>
+          </div>
+          <div class="carousel-slide">
+              <a href="https://github.com/MarcoLc94/ruby-calencli-w1ex-team5-c11">
+                  <img src="./assets/calencliruby.jpg" alt="Project 1">
+                  <h3>October 2022 CalenCLI - RUBY </h3>
+              </a>
+          </div>
+      </div>
+  </div>
+  
+        <!-- Agrega más slides aquí -->
+      </div>
+      <div class="carousel-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <!-- Agrega más indicadores aquí -->
+      </div>
+    </div>
+    <footer class="home-sci">
+      <p class="footerTxt">My portafolio v2.0 Made with ❤️ by Marco López - All Rights Reserved</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
 </html>
