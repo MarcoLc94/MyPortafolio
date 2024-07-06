@@ -41,14 +41,18 @@ body {
   font-size: 26px;
   color: #ededed;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Estilos para el menú hamburguesa */
+.logo.white {
+  color: #000000; /* O el color que desees */
+}
+
+/* Menú Hamburguesa */
 .menu-icon {
   display: block;
   font-size: 30px;
   cursor: pointer;
-  color: #ededed;
   z-index: 1001; /* Asegúrate de que esté encima del navbar */
 }
 
@@ -58,13 +62,11 @@ body {
   right: 20px;
   font-size: 30px;
   cursor: pointer;
-  color: #ededed;
-  z-index: 1001; /* Asegúrate de que esté encima del navbar */
+  z-index: 1001;
 }
 
-/* Estilos para el menú de navegación */
 .navbar {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -74,15 +76,15 @@ body {
   background-color: rgba(0, 0, 0, 0.97);
   justify-content: center;
   align-items: center;
-  z-index: 999; /* Asegúrate de que esté debajo del header */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Aumenta la duración de la transición */
+  z-index: 900;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   transform: translateX(-100%);
-  opacity: 0; /* Oculta el menú inicialmente */
+  opacity: 0;
 }
 
 .navbar.show {
   transform: translateX(0);
-  opacity: 0.9; /* Muestra el menú cuando se agrega la clase */
+  opacity: 0.9;
 }
 
 .navbar a {
@@ -99,7 +101,6 @@ body {
   font-weight: 800;
 }
 
-/* Estilos para el botón de menú en dispositivos móviles */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -428,6 +429,7 @@ footer p {
 .gallery-item h3 {
   margin: 8px 0;
   padding: 0 10px;
+  font-weight: 500;
 }
 
 .contact {
@@ -446,7 +448,6 @@ footer p {
 }
 
 .contact .max-width {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -540,11 +541,10 @@ footer p {
   color: #ededed;
 }
 
-.contact .button:hover {
-  background-color: #00f0b8;
-}
-
 .contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 30px;
 }
 
@@ -586,12 +586,13 @@ footer p {
 .contact .button {
   margin-top: 20px;
   text-align: center;
+  width: auto;
 }
 
 .contact .button button {
-  background-color: #00f0b8;
-  color: #081b29;
-  border: none;
+  background-color: #081b29;
+  color: #ededed;
+  border: #ededed 2px solid;
   padding: 12px 30px;
   font-size: 18px;
   font-weight: 600;
@@ -600,9 +601,18 @@ footer p {
   transition: background-color 0.3s ease;
 }
 
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact .button button:hover {
-  background-color: #081b29;
-  color: #00f0b8;
+  background-color: #00f0b8;
+  color: #081b29;
+}
+.icons .row .info .sub-title a {
+  text-decoration: none;
+  color: #ededed;
 }
 
 @media (min-width: 750px) {
@@ -662,6 +672,14 @@ footer p {
   .techPhoto {
     width: 60%; /* Reducción del tamaño de las imágenes */
     height: auto; /* Mantener la proporción original */
+  }
+}
+
+@media (min-width: 1480px) {
+  .contact {
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -743,4 +761,20 @@ footer p {
   .contact .title {
     flex-direction: column;
   }
+}
+
+@media (min-width: 1480px) {
+  .contact {
+    border: 20px solid transparent;
+  }
+}
+
+/* Cambia el color del logo cuando está en una sección blanca */
+.logo.white {
+  color: #000000; /* Cambia a tu color deseado */
+}
+
+/* Cambia el color del menú hamburguesa cuando está en una sección blanca */
+.menu-icon.white-bg {
+  color: #000000; /* Cambia a tu color deseado */
 }

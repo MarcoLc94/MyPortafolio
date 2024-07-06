@@ -1,31 +1,70 @@
-document.getElementById("menu-icon").addEventListener("click", function () {
-  var navbar = document.getElementById("navbar");
-  if (navbar.style.display === "block") {
-    navbar.style.display = "none";
-  } else {
-    navbar.style.display = "block";
-  }
-});
-
-const menuIcon = document.getElementById("menu-icon");
-const closeIcon = document.getElementById("close-icon");
-const navbar = document.getElementById("navbar");
-
-menuIcon.addEventListener("click", () => {
-  navbar.classList.add("show");
-});
-
-closeIcon.addEventListener("click", () => {
-  navbar.classList.remove("show");
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+  // Variables
+  const logo = document.querySelector(".logo");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+  const navbar = document.getElementById("navbar");
+  const whiteSections = document.querySelectorAll(".white-section");
   const typingElement = document.querySelector(".typing-animation");
 
-  // Asegúrate de que el elemento existe
+  // Función para actualizar colores
+  function updateColors() {
+    let logoInWhiteSection = false;
+    let menuIconInWhiteSection = false;
+
+    whiteSections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 0 && rect.bottom >= 0) {
+        logoInWhiteSection = true;
+        menuIconInWhiteSection = true;
+      }
+    });
+
+    // Cambia el color del logo
+    if (logoInWhiteSection) {
+      logo.classList.add("white");
+    } else {
+      logo.classList.remove("white");
+    }
+
+    // Cambia el color del ícono del menú hamburguesa
+    if (menuIconInWhiteSection) {
+      menuIcon.classList.add("white-bg");
+    } else {
+      menuIcon.classList.remove("white-bg");
+    }
+  }
+
+  // Inicializa el estado de colores
+  updateColors();
+
+  // Escucha el evento de scroll
+  window.addEventListener("scroll", updateColors);
+
+  // También verifica al cambiar el tamaño de la ventana
+  window.addEventListener("resize", updateColors);
+
+  // Funcionalidad del menú hamburguesa
+  if (menuIcon && closeIcon && navbar) {
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.add("show");
+    });
+
+    closeIcon.addEventListener("click", () => {
+      navbar.classList.remove("show");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+        navbar.classList.remove("show");
+      }
+    });
+  }
+
+  // Animación de escritura
   if (typingElement) {
     const phrases = [
-      "Front Developer",
+      "Front End Developer",
       "React.js Developer",
       "Next.js Developer",
     ];
@@ -34,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentCharIndex = 0;
     let isDeleting = false;
 
-    // Función para actualizar el texto de la animación
     function updateText() {
       const currentPhrase = phrases[currentPhraseIndex];
       const displayedText = isDeleting
