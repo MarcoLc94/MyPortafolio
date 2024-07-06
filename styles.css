@@ -14,6 +14,7 @@ body {
   color: #ededed;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 .header {
@@ -111,18 +112,20 @@ body {
 
 .home {
   height: 90vh;
+  width: 100vw;
   display: flex;
   align-items: center;
-  padding: 0 10%;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(0, 0, 0, 0.4);
-  padding-bottom: 15vh;
+  padding: 15%;
 }
 
 .home-content {
-  background: transparent;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
 }
 
 .home-content h1 {
@@ -137,11 +140,6 @@ body {
   line-height: 1.2;
   margin: 0;
 }
-.home-content h3 span {
-  display: inline-flex;
-  align-items: baseline;
-  margin-left: 1vw;
-}
 
 .home-content .typing-animation {
   color: #00f0b8;
@@ -154,7 +152,7 @@ body {
 
 .home-content .btn-box {
   margin-top: 5vh;
-  width: 80vw;
+  width: 70vw;
   height: 50px;
   display: flex;
   gap: 4vw;
@@ -162,8 +160,8 @@ body {
 
 .btn-box a {
   position: relative;
-  display: inline-flex;
-  width: 150px;
+  display: flex;
+  width: 100vw;
   height: 100%;
   background: #00f0b8;
   border: 2px solid #00f0b8;
@@ -275,6 +273,10 @@ body {
   justify-content: center;
 }
 
+.info-main h3 {
+  font-weight: 100;
+}
+
 .info-main p {
   text-align: center;
   font-size: 50px;
@@ -289,9 +291,15 @@ body {
 }
 
 .info-main img {
-  width: 80vw;
+  width: 50vw;
   border-radius: 10px 10px 10px 10px;
   margin: 40px 40px 5px;
+}
+
+.info-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .techCards {
@@ -299,11 +307,18 @@ body {
   padding: 20px;
 }
 
+.column {
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
 .footer {
   display: flex;
+  width: 60%;
   gap: 20px;
   margin: 10px;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 footer {
@@ -320,16 +335,15 @@ footer p {
 }
 
 .typing-animation {
-  display: inline-block;
   font-size: 28px; /* Tamaño de la fuente */
   font-weight: 900;
-  font-stretch: expanded;
   color: #ffffff; /* Color del texto */
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid #00f0b8; /* Línea de cursor */
   animation: blink-caret 0.75s step-end infinite;
   line-height: 1.2; /* Alineación vertical del texto */
+  margin-left: 1vw;
 }
 /*Estilos de la seccion Tecnologias */
 
@@ -365,60 +379,290 @@ footer p {
   filter: drop-shadow(0 0 18px cyan);
 }
 
+.config {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .info-project {
   background-color: #ededed;
   color: #004386;
-  padding: 20px;
+  padding: 30px;
+  text-align: center;
+  border: 40px solid transparent;
 }
-
-.carousel-container {
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
   background-color: #ededed;
-  width: 100%;
+  height: 80vh;
+  padding-bottom: 10vh;
+}
+.gallery-item {
+  flex: 1 1 calc(33.333% - 32px);
+  max-width: calc(33.333% - 32px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: #ededed;
+  text-align: center;
   overflow: hidden;
-  padding: 15px;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.gallery-item img {
+  width: 100%;
+  height: 200px; /* Ajusta esta altura según sea necesario */
+  object-fit: cover;
+}
+.gallery-item a {
+  display: block;
+  text-decoration: none;
+  color: #004386;
+}
+.gallery-item h3 {
+  margin: 8px 0;
+  padding: 0 10px;
 }
 
-.carousel {
-  background-color: #ededed;
+.contact {
+  display: flex;
+  background-color: #081b29;
+  color: #ededed;
+  width: 100%;
+}
+
+.contact .contact-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 80vw;
+  border: 20px solid transparent;
+}
+
+.contact .max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact .title {
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #00f0b8;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact .left {
+  flex: 1;
+}
+
+.contact .right {
+  flex: 1;
+}
+
+.contact .text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact .icons {
+  margin-bottom: 30px;
+}
+
+.contact .row {
   display: flex;
   align-items: center;
-  transition: transform 0.5s ease-in-out;
+  margin-bottom: 20px;
 }
 
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
+.contact .row .head {
+  font-size: 18px;
+  font-weight: 600;
+  color: #00f0b8;
 }
 
-.carousel-slide a {
-  text-decoration: none;
+.contact .row .sub-title {
+  font-size: 16px;
+}
+
+.contact .email-icon {
+  font-size: 20px;
+}
+
+.contact .text1 {
   font-size: 24px;
-  font-weight: 500;
-  margin: 10px 0;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.carousel-slide img {
+.contact .wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.contact .button1 {
+  display: flex;
+  align-items: center;
+}
+
+.contact .icon {
+  font-size: 24px;
+  color: #ededed;
+}
+
+.contact .button1 span {
+  font-size: 18px;
+  color: #ededed;
+}
+
+.contact .button:hover {
+  background-color: #00f0b8;
+}
+
+.contact form {
+  margin-top: 30px;
+}
+
+.contact .fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact .field {
+  flex: 1 1 100%;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
   width: 100%;
-  display: block;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  background-color: #081b29;
+  color: #ededed;
+  outline: none;
 }
 
-.carousel-indicators {
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact textarea:focus {
+  border-color: #00f0b8;
+}
+
+.contact .textarea textarea {
+  min-height: 150px;
+  resize: vertical;
+  padding: 10px;
+}
+
+.contact .button {
+  margin-top: 20px;
   text-align: center;
-  margin-top: 10px;
 }
 
-.indicator {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
+.contact .button button {
+  background-color: #00f0b8;
+  color: #081b29;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.indicator.active {
-  background-color: #333;
+.contact .button button:hover {
+  background-color: #081b29;
+  color: #00f0b8;
+}
+
+@media (min-width: 750px) {
+  .info-main img {
+    width: 260px;
+    height: 220px;
+  }
+
+  .techPhoto {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-tech p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .info-main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer {
+    display: flex;
+  }
+
+  .card-tech img {
+    width: 30%;
+  }
+
+  .techCards {
+    height: 80;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .techCards h2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .card-tech p {
+    font-size: 30px;
+  }
+
+  .info-about {
+    width: 80%;
+    margin: 40px;
+  }
+
+  .info-about h3 {
+    font-size: 30px;
+  }
+
+  .techPhoto {
+    width: 60%; /* Reducción del tamaño de las imágenes */
+    height: auto; /* Mantener la proporción original */
+  }
 }
 
 /* Animación de escritura */
@@ -457,5 +701,46 @@ footer p {
   }
   50% {
     border-color: #00f0b8; /* Color del cursor */
+  }
+}
+
+@media (min-width: 480px) {
+  .contact {
+    margin: 0;
+  }
+
+  .techPhoto {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 800px) {
+  .title2 {
+    font-size: 36px; /* Ajuste de tamaño de título */
+    margin-bottom: 15%; /* Ajuste de margen inferior */
+    margin-top: 15%; /* Ajuste de margen superior */
+  }
+
+  .techCards {
+    gap: 10px; /* Ajuste de espacio entre tarjetas */
+  }
+
+  .techPhoto {
+    width: 40%; /* Reducción del tamaño de las imágenes */
+    height: auto; /* Mantener la proporción original */
+  }
+
+  .card-tech {
+    flex-direction: row; /* Alinear elementos en fila */
+  }
+
+  .techTitle {
+    font-size: 24px; /* Ajuste de tamaño de título de tecnología */
+    margin: 25px; /* Ajuste de margen de título de tecnología */
+  }
+
+  .contact .title {
+    flex-direction: column;
   }
 }

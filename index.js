@@ -66,34 +66,3 @@ document.addEventListener("DOMContentLoaded", () => {
     updateText();
   }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".carousel-slide");
-  const indicators = document.querySelectorAll(".indicator");
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    const offset = -index * 100;
-    document.querySelector(
-      ".carousel"
-    ).style.transform = `translateX(${offset}%)`;
-    indicators.forEach((indicator) => indicator.classList.remove("active"));
-    indicators[index].classList.add("active");
-  }
-
-  indicators.forEach((indicator) => {
-    indicator.addEventListener("click", () => {
-      currentIndex = parseInt(indicator.getAttribute("data-slide"));
-      showSlide(currentIndex);
-    });
-  });
-
-  function autoSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  }
-
-  setInterval(autoSlide, 3000); // Cambia cada 3 segundos
-
-  showSlide(currentIndex);
-});

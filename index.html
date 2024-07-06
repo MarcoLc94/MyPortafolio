@@ -23,174 +23,354 @@
         <i class="bx bx-x"></i>
       </div>
       <div class="items-a">
-        <a href="#" class="active">🏠 Home</a>
-        <a href="#">🧑‍💻 About</a>
-        <a href="#">🛠️ Services</a>
-        <a href="#">🖼️ Portafolio</a>
-        <a href="#">📧 Contact</a>
+        <a href="#home" class="active">🏠 Home</a>
+        <a href="#info-main">🧑‍💻 About</a>
+        <a href="#techpath">🛠️ My stack</a>
+        <a href="#projects">🖼️ Portafolio</a>
+        <a href="#contact">📧 Contact</a>
       </div>
     </nav>
-    <section class="home">
+    <section id="home" class="home">
       <div class="home-content">
         <h3>Hi 👋 I'm</h3>
         <h1>Marco López</h1>
         <h3>And I'm a <span class="typing-animation"></span></h3>
         <div class="btn-box">
-          <a id="firstbtn" href="#">Let’s Talk ></a>
-          <a href="#">Hire me ></a>
+          <a id="firstbtn" href="#contact">Let’s Talk ></a>
+          <a href="#contact">Hire me ></a>
         </div>
       </div>
     </section>
-    <div class="info-main">
-      <p><p>&lt;About me &gt;</p></p>
-     <div class="container-img">
-      <img src="./assets/Imagen de WhatsApp 2024-07-05 a las 13.02.00_57b0ea03.jpg" alt="">
-      <div class="footer">
-        <a href="https://www.facebook.com/ChampMarco" target="_blank">
-          <i class="bx bxl-facebook-circle"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/marcolc94/" target="_blank">
-          <i class="bx bxl-linkedin-square"></i>
-        </a>
-        <a href="https://github.com/MarcoLc94" target="_blank">
-          <i class="bx bxl-github"></i>
-        </a>
+    <div id="info-main" class="info-main">
+      <div class="container-img">
+        <p>&lt;About me &gt;</p>
+        <img
+          src="./assets/Imagen de WhatsApp 2024-07-05 a las 13.02.00_57b0ea03.jpg"
+          alt=""
+        />
+        <div class="footer">
+          <a href="https://www.facebook.com/ChampMarco" target="_blank">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marcolc94/" target="_blank">
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a href="https://github.com/MarcoLc94" target="_blank">
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
       </div>
-     </div>
-      <h1>Hi! I´m Marco López</h1>
-      <h3>
-        I am very passionate about <b>front-end</b> and I have a solid
-        experience in creating engaging web experiences and functional.
-      </h3>
-      <h3>
-        My approach focuses on combining creative design with technical
-        development to offer high quality web solutions and performance.
-      </h3>
-      <h3>
-        I enjoy everything from responsive design to optimizing the user
-        experience. I strive to create websites that are not only visually
-        attractive, but also intuitive and accessible to everyone.
-      </h3>
-      <h3>
-        Explore my portfolio to discover my work and how I can help you achieve
-        your goals online. I hope to collaborate with you soon!
-      </h3>
+      <div class="info-about">
+        <h1>Hi! I´m Marco López</h1>
+        <h3>
+          I am very passionate about <b>front-end</b> and I have a solid
+          experience in creating engaging web experiences and functional. My
+          approach focuses on combining creative design with technical
+          development to offer high quality web solutions and performance.
+          Explore my portfolio to discover my work and how I can help you
+          achieve your goals online. I hope to collaborate with you soon!
+        </h3>
+      </div>
     </div>
 
     <section class="techCards" id="techpath">
       <h2 class="title2">My technology stacks</h2>
       <div class="card-tech">
-        <img class="techPhoto" src="./assets/html.png" alt="">
-        <p class="techTitle">HTML 5</p>
-        <p>I use HTML to structure the content of my web pages, ensuring the use of semantic tags for better accessibility and SEO.</p>
+        <div class="config">
+          <img class="techPhoto" src="./assets/html.png" alt="HTML 5" />
+          <p class="techTitle">HTML 5</p>
+        </div>
+        <p>
+          I use HTML to structure the content of my web pages, ensuring the use
+          of semantic tags for better accessibility and SEO.
+        </p>
       </div>
       <div class="card-tech">
-        <p>I apply CSS to style and design my websites, creating attractive and responsive interfaces that adapt to different devices and screen sizes.</p>
-        <img class="techPhoto" src="./assets/css (1).png" alt="">
-        <p class="techTitle">CSS 3</p>
+        <div class="config">
+          <img class="techPhoto" src="./assets/css (1).png" alt="CSS 3" />
+          <p class="techTitle">CSS 3</p>
+        </div>
+        <p>
+          I apply CSS to style and design my websites, creating attractive and
+          responsive interfaces that adapt to different devices and screen
+          sizes.
+        </p>
       </div>
       <div class="card-tech">
-        <img class="techPhoto" src="./assets/js (1).png" alt="">
-        <p class="techTitle">Javascript ES6</p>
-        <p>I integrate JavaScript to add interactivity and dynamism to my projects, from smooth animations to advanced functionalities like DOM manipulation and API calls.</p>
+        <div class="config">
+          <img
+            class="techPhoto"
+            src="./assets/js (1).png"
+            alt="Javascript ES6"
+          />
+          <p class="techTitle">Javascript ES6</p>
+        </div>
+        <p>
+          I integrate JavaScript to add interactivity and dynamism to my
+          projects, from smooth animations to advanced functionalities like DOM
+          manipulation and API calls.
+        </p>
       </div>
       <div class="card-tech">
-        <p>I develop my user interfaces using React, leveraging its modularity and ability to reuse components, allowing me to create scalable and easy-to-maintain applications.</p>
-        <img class="techPhoto" src="./assets/icons8-reaccionar-400.png" alt="">
-        <p class="techTitle">React JS</p>
+        <div class="config">
+          <img
+            class="techPhoto"
+            src="./assets/icons8-reaccionar-400.png"
+            alt="React JS"
+          />
+          <p class="techTitle">React JS</p>
+        </div>
+        <p>
+          I develop my user interfaces using React, leveraging its modularity
+          and ability to reuse components, allowing me to create scalable and
+          easy-to-maintain applications.
+        </p>
       </div>
       <div class="card-tech">
-        <img class="techPhoto" src="./assets/icons8-mecanografiado-480.png" alt="">
-        <p class="techTitle">Typescript</p>
-        <p>I implement TypeScript in my projects to add a static typing system that helps me detect errors at compile time and improve the quality and robustness of my code.</p>
+        <div class="config">
+          <img
+            class="techPhoto"
+            src="./assets/icons8-mecanografiado-480.png"
+            alt="Typescript"
+          />
+          <p class="techTitle">Typescript</p>
+        </div>
+        <p>
+          I implement TypeScript in my projects to add a static typing system
+          that helps me detect errors at compile time and improve the quality
+          and robustness of my code.
+        </p>
       </div>
       <div class="card-tech">
-        <p>I use Node.js to develop the backend of my web applications, leveraging its ability to handle multiple connections efficiently and build robust and scalable APIs.</p>
-        <img class="techPhoto" src="./assets/programacion.png" alt="">
-        <p class="techTitle">Node JS</p>
+        <div class="config">
+          <img
+            class="techPhoto"
+            src="./assets/programacion.png"
+            alt="Node JS"
+          />
+          <p class="techTitle">Node JS</p>
+        </div>
+        <p>
+          I use Node.js to develop the backend of my web applications,
+          leveraging its ability to handle multiple connections efficiently and
+          build robust and scalable APIs.
+        </p>
       </div>
       <div class="card-tech">
-        <img class="techPhoto" src="./assets/postgre.png" alt="">
-        <p class="techTitle">Postgre SQL</p>
-        <p>I use PostgreSQL as my preferred relational database, ensuring data integrity and security while efficiently handling large volumes of information.</p>
+        <div class="config">
+          <img class="techPhoto" src="./assets/postgre.png" alt="Postgre SQL" />
+          <p class="techTitle">Postgre SQL</p>
+        </div>
+        <p>
+          I use PostgreSQL as my preferred relational database, ensuring data
+          integrity and security while efficiently handling large volumes of
+          information.
+        </p>
       </div>
       <div class="card-tech">
-        <p>In certain projects, I opt for MySQL as my relational database management system, relying on its speed and reliability to store and manipulate critical data.</p>
-        <img class="techPhoto" src="./assets/mysql (1).png" alt="">
-        <p class="techTitle">MySQL</p>
+        <div class="config">
+          <img class="techPhoto" src="./assets/mysql (1).png" alt="MySQL" />
+          <p class="techTitle">MySQL</p>
+        </div>
+        <p>
+          In certain projects, I opt for MySQL as my relational database
+          management system, relying on its speed and reliability to store and
+          manipulate critical data.
+        </p>
       </div>
       <div class="card-tech">
-        <img class="techPhoto" src="./assets/social.png" alt="">
-        <p class="techTitle">Git & Github</p>
-        <p>I manage my projects collaboratively using Git and GitHub, allowing me to maintain solid version control, collaborate with other developers, and easily deploy my applications in production.</p>
+        <div class="config">
+          <img class="techPhoto" src="./assets/social.png" alt="Git & Github" />
+          <p class="techTitle">Git & Github</p>
+        </div>
+        <p>
+          I manage my projects collaboratively using Git and GitHub, allowing me
+          to maintain solid version control, collaborate with other developers,
+          and easily deploy my applications in production.
+        </p>
       </div>
       <div class="card-tech">
-        <p>I use Vite.js as a build tool in my projects, leveraging its speed and efficiency to accelerate the development process and enhance the user experience.</p>
-        <img class="techPhoto" src="./assets/Vite.js.png" alt="">
-        <p class="techTitle">Vite + React</p>
-      </div>   
-      <div class="card-tech">
-        <img class="techPhoto" src="./assets/ruby.png" alt="">
-        <p class="techTitle">Ruby</p>
-        <p>With Ruby, I write clean, maintainable code to build scalable applications. Ruby's elegant syntax and dynamic nature allow for quick development of high-quality software solutions.</p>
+        <div class="config">
+          <img
+            class="techPhoto"
+            src="./assets/Vite.js.png"
+            alt="Vite + React"
+          />
+          <p class="techTitle">Vite + React</p>
+        </div>
+        <p>
+          I use Vite.js as a build tool in my projects, leveraging its speed and
+          efficiency to accelerate the development process and enhance the user
+          experience.
+        </p>
       </div>
       <div class="card-tech">
-        <p>Is a powerful web application framework that enables me to develop robust and efficient web applications. Its convention-over-configuration approach and built-in tools streamline the development process, allowing for rapid and effective project delivery.</p>
-        <img class="techPhoto" src="./assets/PikPng.com_kali-linux-png_4476025.png" alt="">
-        <p class="techTitle">Ruby On Rails</p>
-      </div>      
+        <div class="config">
+          <img class="techPhoto" src="./assets/ruby.png" alt="Ruby" />
+          <p class="techTitle">Ruby</p>
+        </div>
+        <p>
+          With Ruby, I write clean, maintainable code to build scalable
+          applications. Ruby's elegant syntax and dynamic nature allow for quick
+          development of high-quality software solutions.
+        </p>
+      </div>
+      <div class="card-tech">
+        <div class="config">
+          <img
+            class="techPhoto"
+            src="./assets/PikPng.com_kali-linux-png_4476025.png"
+            alt="Ruby On Rails"
+          />
+          <p class="techTitle">Ruby On Rails</p>
+        </div>
+        <p>
+          Is a powerful web application framework that enables me to develop
+          robust and efficient web applications. Its
+          convention-over-configuration approach and built-in tools streamline
+          the development process, allowing for rapid and effective project
+          delivery.
+        </p>
+      </div>
     </section>
 
-    <div class="info-project">
-     <h1>My Projects</h1>
-     <h3>&lt;Review my work now overhere&gt;</h3>
+    <div id="projects" class="info-project">
+      <h1>My Projects</h1>
+      <h3>&lt;Review my work now overhere&gt;</h3>
     </div>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-slide">
-          <a href="https://github.com/MarcoLc94/ToDo-List-ReactVite">
-              <img src="./assets/ToDoList React.jpg" alt="Project 4">
-              <h3>June 2023 React ToDo - React.js</h3>
-          </a>
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="https://github.com/MarcoLc94/Keepable-Js-Vanilla">
+          <img src="./assets/keepable.jpg" alt="Project 5" />
+          <h3>October 2023 Keepable - Js Vanilla</h3>
+        </a>
       </div>
-          <div class="carousel-slide">
-              <a href="https://github.com/MarcoLc94/ToDoList-Javascript">
-                  <img src="./assets/todojs.jpg" alt="Project 3">
-                  <h3>March 2023 ToDo Js - Javascript</h3>
-              </a>
-          </div>
-          <div class="carousel-slide">
-              <a href="https://github.com/MarcoLc94/Expenses-JS">
-                  <img src="./assets/expenses js.jpg" alt="Project 2">
-                  <h3>January 2023 Expenses App - JavaScript</h3>
-              </a>
-          </div>
-          <div class="carousel-slide">
-              <a href="https://github.com/MarcoLc94/Expensable-App-JS">
-                  <img src="./assets/expensable.jpg" alt="Project 3">
-                  <h3>February 2023 Expenses 2.0 - Javascript</h3>
-              </a>
-          </div>
-          <div class="carousel-slide">
-              <a href="https://github.com/MarcoLc94/ruby-calencli-w1ex-team5-c11">
-                  <img src="./assets/calencliruby.jpg" alt="Project 1">
-                  <h3>October 2022 CalenCLI - RUBY </h3>
-              </a>
-          </div>
+      <div class="gallery-item">
+        <a href="https://github.com/MarcoLc94/Doable-App-JS-Vanilla">
+          <img src="./assets/doablejs.jpg" alt="Project 5" />
+          <h3>August 2023 Doable - Js Vanilla</h3>
+        </a>
       </div>
-  </div>
-  
-        <!-- Agrega más slides aquí -->
+      <div class="gallery-item">
+        <a href="https://github.com/MarcoLc94/Offix-2.0---Rails">
+          <img src="./assets/offix.jpg" alt="Project 5" />
+          <h3>July 2023 Offix App - Rails</h3>
+        </a>
       </div>
-      <div class="carousel-indicators">
-        <span class="indicator active" data-slide="0"></span>
-        <span class="indicator" data-slide="1"></span>
-        <span class="indicator" data-slide="2"></span>
-        <!-- Agrega más indicadores aquí -->
+      <div class="gallery-item">
+        <a href="https://github.com/MarcoLc94/React-ToDo-List">
+          <img src="./assets/ToDoList React.jpg" alt="Project 4" />
+          <h3>June 2023 React ToDo - React.js</h3>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="https://github.com/MarcoLc94/ToDoList-Javascript">
+          <img src="./assets/newtodo2js.jpg" alt="Project 3" />
+          <h3>March 2023 ToDo Js - Javascript</h3>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="https://github.com/MarcoLc94/Expenses-JS">
+          <img src="./assets/expenses js.jpg" alt="Project 2" />
+          <h3>January 2023 Expenses App - JavaScript</h3>
+        </a>
       </div>
     </div>
+    <section class="contact" id="contact">
+      <div class="max-width">
+        <h2 class="title fadein">Contact me</h2>
+        <div class="contact-content">
+          <div class="column left">
+            <div class="text">Reach Out to me!</div>
+            <p>
+              Discuss a Project or just want to say Hi? My inbox is open for
+              all.
+            </p>
+            <div class="icons">
+              <div class="row">
+                <i class="fas fa-user"></i>
+                <div class="info">
+                  <div class="head">Name</div>
+                  <div class="sub-title">Marco López</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info">
+                  <div class="head">Phone Number</div>
+                  <div class="sub-title">8118474519</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fas fa-envelope email-icon"></i>
+                <div class="info">
+                  <div class="head">Email</div>
+                  <div class="sub-title">
+                    <a href="mailto:mlop.dev@outlook.com" target="_blank">
+                      mlop.dev@outlook.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text1">Stay Connected</div>
+            <div>
+              <!-- Aquí puedes agregar los enlaces a redes sociales si es necesario -->
+            </div>
+          </div>
+          <div class="column right">
+            <div class="text">Message me</div>
+            <form
+              action="https://formspree.io/f/xnnaqlvr"
+              method="POST"
+              class="contact-form"
+            >
+              <div class="fields">
+                <div class="field name">
+                  <input type="text" name="name" placeholder="Name" required />
+                </div>
+                <div class="field email">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="field textarea">
+                <textarea
+                  name="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Describe Project..."
+                  required
+                ></textarea>
+              </div>
+              <div class="button">
+                <button type="submit">
+                  Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="home-sci">
-      <p class="footerTxt">My portafolio v2.0 Made with ❤️ by Marco López - All Rights Reserved</p>
+      <p class="footerTxt">
+        My portafolio v2.0 Made with ❤️ by Marco López - &copy; All Rights
+        Reserved
+      </p>
     </footer>
     <script src="index.js"></script>
   </body>
