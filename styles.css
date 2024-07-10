@@ -1,5 +1,5 @@
 /* styles.css */
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap");
 * {
@@ -118,8 +118,10 @@ body {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgb(0, 0, 0, 0.4);
   padding: 15%;
+  background-image: url();
+  background-blend-mode: overlay;
+  background-color: rgb(0, 0, 0, 0.4);
 }
 
 .home-content {
@@ -348,52 +350,58 @@ footer p {
 }
 /*Estilos de la seccion Tecnologias */
 
+.techCards {
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+}
+
 .title2 {
   text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 20%;
-  margin-top: 20%;
-  filter: drop-shadow(0 0 18px cyan);
+  font-size: 2rem;
+  padding-bottom: 2rem;
 }
 
-.techCards {
-  display: flex;
-  flex-direction: column;
-}
-
-.techPhoto {
-  width: 20%;
-  height: 10%;
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
 .card-tech {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px;
-}
-
-.techTitle {
-  color: #ededed;
-  margin: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
   text-align: center;
-  filter: drop-shadow(0 0 18px cyan);
+  color: #004386;
 }
 
 .config {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  margin-bottom: 1rem;
 }
 
+.techPhoto {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.techTitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.techDesc {
+  color: #333;
+  font-size: 0.9rem;
+}
 .info-project {
   background-color: #ededed;
   color: #004386;
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
   text-align: center;
-  border: 40px solid transparent;
+  border: 40px 40px 0px 40px solid transparent;
 }
 .gallery {
   display: flex;
@@ -401,8 +409,8 @@ footer p {
   gap: 16px;
   justify-content: center;
   background-color: #ededed;
-  height: 80vh;
-  padding-bottom: 10vh;
+  height: 100%;
+  padding: 5vw;
 }
 .gallery-item {
   flex: 1 1 calc(33.333% - 32px);
@@ -641,25 +649,6 @@ footer p {
     display: flex;
   }
 
-  .card-tech img {
-    width: 30%;
-  }
-
-  .techCards {
-    height: 80;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .techCards h2 {
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-
-  .card-tech p {
-    font-size: 30px;
-  }
-
   .info-about {
     width: 80%;
     margin: 40px;
@@ -667,11 +656,6 @@ footer p {
 
   .info-about h3 {
     font-size: 30px;
-  }
-
-  .techPhoto {
-    width: 60%; /* Reducción del tamaño de las imágenes */
-    height: auto; /* Mantener la proporción original */
   }
 }
 
@@ -734,30 +718,6 @@ footer p {
 }
 
 @media (min-width: 800px) {
-  .title2 {
-    font-size: 36px; /* Ajuste de tamaño de título */
-    margin-bottom: 15%; /* Ajuste de margen inferior */
-    margin-top: 15%; /* Ajuste de margen superior */
-  }
-
-  .techCards {
-    gap: 10px; /* Ajuste de espacio entre tarjetas */
-  }
-
-  .techPhoto {
-    width: 40%; /* Reducción del tamaño de las imágenes */
-    height: auto; /* Mantener la proporción original */
-  }
-
-  .card-tech {
-    flex-direction: row; /* Alinear elementos en fila */
-  }
-
-  .techTitle {
-    font-size: 24px; /* Ajuste de tamaño de título de tecnología */
-    margin: 25px; /* Ajuste de margen de título de tecnología */
-  }
-
   .contact .title {
     flex-direction: column;
   }
@@ -769,6 +729,13 @@ footer p {
   }
 }
 
+@media (max-width: 400px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* Cambia el color del logo cuando está en una sección blanca */
 .logo.white {
   color: #000000; /* Cambia a tu color deseado */
@@ -777,4 +744,161 @@ footer p {
 /* Cambia el color del menú hamburguesa cuando está en una sección blanca */
 .menu-icon.white-bg {
   color: #000000; /* Cambia a tu color deseado */
+}
+
+.dark-mode-toggle.white-bg {
+  color: #000000; /* Cambia a tu color deseado */
+}
+/* Añadir al final de tu archivo styles.css */
+
+/* Modo oscuro */
+body.dark-mode {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #ffffff;
+}
+
+body.dark-mode .header {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .logo {
+  color: #ffffff;
+}
+
+body.dark-mode .menu-icon {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: rgba(0, 0, 0, 0.97);
+}
+
+body.dark-mode .navbar a {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar a.active {
+  color: #00f0b8;
+}
+
+body.dark-mode .btn-box a {
+  border: 2px solid #00f0b8;
+  color: #00f0b8;
+}
+
+body.dark-mode .btn-box a:hover {
+  color: black;
+}
+
+body.dark-mode .btn-box #firstbtn {
+  border: 2px solid #00f0b8;
+  color: #000000;
+}
+
+body.dark-mode .btn-box #firstbtn:hover {
+  color: #00f0b8;
+}
+
+body.dark-mode .footer a {
+  border: 2px solid #004386;
+  color: #004386;
+}
+
+body.dark-mode .footer a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .info-main {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+body.dark-mode .info-main img {
+  border-radius: 10px;
+}
+
+body.dark-mode .home-content .typing-animation {
+  color: #00f0b8;
+}
+
+/* Estilo del botón de Dark Mode */
+.dark-mode-toggle {
+  background: transparent;
+  border: none;
+  color: #ededed;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002;
+  position: relative;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Sección de My Projects */
+
+body.dark-mode .my-projects {
+  background-color: #2e2e2e; /* Fondo oscuro en dark mode */
+  color: #e0e0e0; /* Color del texto claro en dark mode */
+}
+body.dark-mode .my-moon {
+  color: #e0e0e0;
+}
+
+body.dark-mode .my-moon :hover {
+  color: #00f0b8;
+}
+
+.dark-mode-toggle:hover {
+  color: #00f0b8;
+}
+
+body.dark-mode .gallery-item {
+  background-color: #2c2c2c;
+  border: 2px solid #ededed;
+}
+
+body.dark-mode .gallery-item h3 {
+  color: #ededed;
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .gallery-item img {
+  border: 1px solid #ededed;
+}
+
+body.dark-mode .card-tech {
+  background-color: #2c2c2c;
+  border: 1px solid #ededed;
+}
+
+body.dark-mode .card-tech .techDesc {
+  color: #ededed;
+}
+
+.fas {
+  margin: 10px;
+}
+
+.fab {
+  margin: 10px;
+}
+
+.fa-solid {
+  margin: 10px;
+}
+
+body.dark-mode .techCards {
+  background: linear-gradient(135deg, #000000, #000c17);
+  padding: 20px;
+}
+
+body.dark-mode h1 {
+  color: #00f0b8;
+}
+
+body.dark-mode p {
+  color: #00f0b8;
 }

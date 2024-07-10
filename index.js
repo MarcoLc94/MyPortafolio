@@ -6,17 +6,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const whiteSections = document.querySelectorAll(".white-section");
   const typingElement = document.querySelector(".typing-animation");
+  const letsTalkBtn = document.getElementById("firstbtn");
+  const darkModeToggle = document.querySelector(".dark-mode-toggle");
+
+  // Verificar el estado inicial del modo oscuro
+  const isDarkMode = localStorage.getItem("dark-mode") === "true";
+
+  // Aplicar el modo oscuro si está activado
+  if (isDarkMode) {
+    document.body.classList.add("dark-mode");
+  }
+
+  // Función para alternar el modo oscuro
+  const toggleDarkMode = () => {
+    document.body.classList.toggle("dark-mode");
+    // Guardar la preferencia en localStorage
+    localStorage.setItem(
+      "dark-mode",
+      document.body.classList.contains("dark-mode")
+    );
+  };
+
+  // Agregar el evento de clic al botón de Dark Mode
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+  }
 
   // Función para actualizar colores
   function updateColors() {
     let logoInWhiteSection = false;
     let menuIconInWhiteSection = false;
+    let moonInWhiteSection = false;
 
     whiteSections.forEach((section) => {
       const rect = section.getBoundingClientRect();
       if (rect.top <= 0 && rect.bottom >= 0) {
         logoInWhiteSection = true;
         menuIconInWhiteSection = true;
+        moonInWhiteSection = true;
       }
     });
 
@@ -32,6 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
       menuIcon.classList.add("white-bg");
     } else {
       menuIcon.classList.remove("white-bg");
+    }
+
+    if (moonInWhiteSection) {
+      darkModeToggle.classList.add("white-bg");
+    } else {
+      darkModeToggle.classList.remove("white-bg");
     }
   }
 

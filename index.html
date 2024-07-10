@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Marco López's portfolio showcasing front-end development skills and projects. Explore my work and get in touch!"
+    />
     <title>Marco´s Portafolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -18,6 +18,9 @@
   <body>
     <header class="header">
       <a href="#" class="logo">My Portfolio</a>
+      <button class="dark-mode-toggle my-moon" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+      </button>
       <div class="menu-icon" id="menu-icon">
         <i class="bx bx-menu"></i>
       </div>
@@ -40,8 +43,13 @@
         <h1>Marco López</h1>
         <h3>And I'm a <span class="typing-animation"></span></h3>
         <div class="btn-box">
-          <a id="firstbtn" href="#contact">Let’s Talk ></a>
-          <a href="#contact">Hire me ></a>
+          <a
+            id="firstbtn"
+            href="https://wa.me/8126991531?text=Hola%2C%20estoy%20interesado%20en%20tus%20servicios"
+            target="_blank"
+            ><i class="fab fa-whatsapp"></i>Let’s Talk ></a
+          >
+          <a href="#contact"><i class="fa-solid fa-envelope"></i>Hire me ></a>
         </div>
       </div>
     </section>
@@ -77,176 +85,170 @@
       </div>
     </div>
 
-    <section class="techCards" id="techpath">
-      <h2 class="title2">My technology stacks</h2>
-      <div class="card-tech">
-        <div class="config">
-          <img class="techPhoto" src="./assets/html.png" alt="HTML 5" />
-          <p class="techTitle">HTML 5</p>
+    <section class="techCards my-projects" id="techpath">
+      <h2 class="title2 my-projects">My Technology Stacks</h2>
+      <div class="tech-grid my-projects white-section">
+        <div class="card-tech">
+          <div class="config">
+            <img class="techPhoto" src="./assets/html.png" alt="HTML 5" />
+            <p class="techTitle">HTML 5</p>
+          </div>
+          <p class="techDesc">
+            Structuring content with semantic tags for better accessibility and
+            SEO.
+          </p>
         </div>
-        <p>
-          I use HTML to structure the content of my web pages, ensuring the use
-          of semantic tags for better accessibility and SEO.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img class="techPhoto" src="./assets/css (1).png" alt="CSS 3" />
-          <p class="techTitle">CSS 3</p>
+        <div class="card-tech">
+          <div class="config">
+            <img class="techPhoto" src="./assets/css (1).png" alt="CSS 3" />
+            <p class="techTitle">CSS 3</p>
+          </div>
+          <p class="techDesc">
+            Designing responsive interfaces that adapt to different devices and
+            screen sizes.
+          </p>
         </div>
-        <p>
-          I apply CSS to style and design my websites, creating attractive and
-          responsive interfaces that adapt to different devices and screen
-          sizes.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img
-            class="techPhoto"
-            src="./assets/js (1).png"
-            alt="Javascript ES6"
-          />
-          <p class="techTitle">Javascript ES6</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/js (1).png"
+              alt="JavaScript ES6"
+            />
+            <p class="techTitle">JavaScript ES6</p>
+          </div>
+          <p class="techDesc">
+            Adding interactivity and advanced functionalities like DOM
+            manipulation and API calls.
+          </p>
         </div>
-        <p>
-          I integrate JavaScript to add interactivity and dynamism to my
-          projects, from smooth animations to advanced functionalities like DOM
-          manipulation and API calls.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img
-            class="techPhoto"
-            src="./assets/icons8-reaccionar-400.png"
-            alt="React JS"
-          />
-          <p class="techTitle">React JS</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/icons8-reaccionar-400.png"
+              alt="React JS"
+            />
+            <p class="techTitle">React JS</p>
+          </div>
+          <p class="techDesc">
+            Developing scalable and maintainable user interfaces with reusable
+            components.
+          </p>
         </div>
-        <p>
-          I develop my user interfaces using React, leveraging its modularity
-          and ability to reuse components, allowing me to create scalable and
-          easy-to-maintain applications.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img
-            class="techPhoto"
-            src="./assets/icons8-mecanografiado-480.png"
-            alt="Typescript"
-          />
-          <p class="techTitle">Typescript</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/icons8-mecanografiado-480.png"
+              alt="TypeScript"
+            />
+            <p class="techTitle">TypeScript</p>
+          </div>
+          <p class="techDesc">
+            Adding static typing to improve code quality and catch errors at
+            compile time.
+          </p>
         </div>
-        <p>
-          I implement TypeScript in my projects to add a static typing system
-          that helps me detect errors at compile time and improve the quality
-          and robustness of my code.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img
-            class="techPhoto"
-            src="./assets/programacion.png"
-            alt="Node JS"
-          />
-          <p class="techTitle">Node JS</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/programacion.png"
+              alt="Node JS"
+            />
+            <p class="techTitle">Node JS</p>
+          </div>
+          <p class="techDesc">
+            Developing backend applications and building robust APIs.
+          </p>
         </div>
-        <p>
-          I use Node.js to develop the backend of my web applications,
-          leveraging its ability to handle multiple connections efficiently and
-          build robust and scalable APIs.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img class="techPhoto" src="./assets/postgre.png" alt="Postgre SQL" />
-          <p class="techTitle">Postgre SQL</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/postgre.png"
+              alt="PostgreSQL"
+            />
+            <p class="techTitle">PostgreSQL</p>
+          </div>
+          <p class="techDesc">
+            Managing data with a relational database system known for its
+            integrity and security.
+          </p>
         </div>
-        <p>
-          I use PostgreSQL as my preferred relational database, ensuring data
-          integrity and security while efficiently handling large volumes of
-          information.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img class="techPhoto" src="./assets/mysql (1).png" alt="MySQL" />
-          <p class="techTitle">MySQL</p>
+        <div class="card-tech">
+          <div class="config">
+            <img class="techPhoto" src="./assets/mysql (1).png" alt="MySQL" />
+            <p class="techTitle">MySQL</p>
+          </div>
+          <p class="techDesc">
+            Utilizing MySQL for speed and reliability in data storage and
+            manipulation.
+          </p>
         </div>
-        <p>
-          In certain projects, I opt for MySQL as my relational database
-          management system, relying on its speed and reliability to store and
-          manipulate critical data.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img class="techPhoto" src="./assets/social.png" alt="Git & Github" />
-          <p class="techTitle">Git & Github</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/social.png"
+              alt="Git & GitHub"
+            />
+            <p class="techTitle">Git & GitHub</p>
+          </div>
+          <p class="techDesc">
+            Managing version control and collaboration with other developers.
+          </p>
         </div>
-        <p>
-          I manage my projects collaboratively using Git and GitHub, allowing me
-          to maintain solid version control, collaborate with other developers,
-          and easily deploy my applications in production.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img
-            class="techPhoto"
-            src="./assets/Vite.js.png"
-            alt="Vite + React"
-          />
-          <p class="techTitle">Vite + React</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/Vite.js.png"
+              alt="Vite + React"
+            />
+            <p class="techTitle">Vite + React</p>
+          </div>
+          <p class="techDesc">
+            Using Vite.js for fast development builds and enhanced user
+            experience.
+          </p>
         </div>
-        <p>
-          I use Vite.js as a build tool in my projects, leveraging its speed and
-          efficiency to accelerate the development process and enhance the user
-          experience.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img class="techPhoto" src="./assets/ruby.png" alt="Ruby" />
-          <p class="techTitle">Ruby</p>
+        <div class="card-tech">
+          <div class="config">
+            <img class="techPhoto" src="./assets/ruby.png" alt="Ruby" />
+            <p class="techTitle">Ruby</p>
+          </div>
+          <p class="techDesc">
+            Writing clean and maintainable code to build scalable applications.
+          </p>
         </div>
-        <p>
-          With Ruby, I write clean, maintainable code to build scalable
-          applications. Ruby's elegant syntax and dynamic nature allow for quick
-          development of high-quality software solutions.
-        </p>
-      </div>
-      <div class="card-tech">
-        <div class="config">
-          <img
-            class="techPhoto"
-            src="./assets/PikPng.com_kali-linux-png_4476025.png"
-            alt="Ruby On Rails"
-          />
-          <p class="techTitle">Ruby On Rails</p>
+        <div class="card-tech">
+          <div class="config">
+            <img
+              class="techPhoto"
+              src="./assets/PikPng.com_kali-linux-png_4476025.png"
+              alt="Ruby On Rails"
+            />
+            <p class="techTitle">Ruby On Rails</p>
+          </div>
+          <p class="techDesc">
+            Developing efficient web applications with a
+            convention-over-configuration framework.
+          </p>
         </div>
-        <p>
-          Is a powerful web application framework that enables me to develop
-          robust and efficient web applications. Its
-          convention-over-configuration approach and built-in tools streamline
-          the development process, allowing for rapid and effective project
-          delivery.
-        </p>
       </div>
     </section>
 
-    <div id="projects" class="info-project white-section">
+    <div id="projects" class="info-project white-section my-projects">
       <h1>My Projects</h1>
       <h3>&lt;Review my work now overhere&gt;</h3>
     </div>
-    <div class="gallery white-section">
+    <div class="gallery white-section my-projects">
       <div class="gallery-item">
         <a href="https://github.com/MarcoLc94/Keepable-Js-Vanilla">
           <img src="./assets/keepable.jpg" alt="Project 5" />
-          <h3>October 2023 Keepable - Js Vanilla</h3>
+          <h3 class="">October 2023 Keepable - Js Vanilla</h3>
         </a>
       </div>
       <div class="gallery-item">
