@@ -844,7 +844,7 @@ body.dark-mode .my-projects {
   color: #e0e0e0; /* Color del texto claro en dark mode */
 }
 body.dark-mode .my-moon {
-  color: #e0e0e0;
+  color: #00f0b8;
 }
 
 body.dark-mode .my-moon :hover {
@@ -901,4 +901,9 @@ body.dark-mode h1 {
 
 body.dark-mode p {
   color: #00f0b8;
+}
+
+body.dark-mode .footer a {
+  color: #00f0b8;
+  border: #00f0b8 1px solid;
 }
